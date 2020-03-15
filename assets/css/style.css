@@ -1,0 +1,164 @@
+body {
+    background-color: #000;
+    font-size: 22px;
+    font-family: 'Oswald', sans-serif;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: red;
+}
+.sidenav {
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #909090;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: red;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 2.5rem;
+    margin-left: 50px;
+}
+
+.hamburguer {
+    z-index: 2;
+    position: relative;
+    display: inline-block;
+}
+.hamburguer span {
+    padding: 10px 25px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.bigger {
+    font-size: 5rem;
+    color: red;
+    font-weight: 700;
+}
+.container{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.flex-container {
+    display: flex;
+    align-content: stretch;
+}
+.section {
+    display: flex;
+    max-height: 220px;
+    border: 1px solid #830000; 
+    color: white;
+    margin: 0;
+    padding: 0;
+    transition: flex 0.5s;
+}
+.section p {
+    margin: auto 0;
+    text-align: left;
+    margin-left: 10px;
+    padding-right: 10px;
+}
+
+span#title {
+    background-color: #830000;
+}
+.section img {
+    zoom: 2;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    overflow: hidden;
+}
+
+#title{
+    writing-mode: vertical-lr;
+    font-size: 1.5rem;
+    padding: 15px;
+    text-align: center;
+    transform: rotate(180deg);
+    letter-spacing: 5px;
+}
+
+#news {
+    width: 100%;
+}
+#topic {
+    flex-shrink: 1;
+}
+#rest {
+    flex-shrink: 3;
+}
+
+#rrss {
+    float: right;
+    padding-right: 25px;
+}
+#rrss a{
+    color: white;
+}
+
+#logo {
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a { font-size: 1.3rem;}
+}
+
+@media (min-width: 769px) {
+    .container {
+        position: absolute;
+    }
+    .section {
+        height: 180px;
+        margin: 0;
+    }
+}
+@media (max-width: 768px) {
+    #news, #topic, #rest {
+        flex-shrink: 1;
+        width: calc(50% - ( 1px * 8 ));
+        margin: 0;
+    }
+    .flex-container {
+        flex-wrap: wrap;
+    }
+    .container {
+        position: relative;
+    }
+}
+@media (max-width: 565px){
+    #news, #topic, #rest {
+        flex-shrink: 0;
+        width: calc(100% - ( 1px * 8 ));
+    }
+}
